@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>摸底考试</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+        <script type="text/javascript" src='scripts/flexible.debug.js'></script>
+        <script type="text/javascript" src='scripts/flexible_css.debug.js'></script>  
+        <script type="text/javascript" src='scripts/zepto.js'></script>
+        <script type="text/javascript" src='scripts/iscroll-zoom.js'></script>
+        <script type="text/javascript" src='scripts/demoUtils.js'></script>
+        <script type="text/javascript" src='scripts/script.js'></script>
+        <script type="text/javascript">
+            var myScroll;
+            function loaded () {
+                myScroll = new IScroll('#wrapper', { 
+                    mouseWheel: true ,
+                    bounce:false
+                });
+            }
+
+            document.addEventListener('touchmove', function (e) { e.preventDefault(); }, isPassive() ? {
+                capture: false,
+                passive: false
+            } : false);
+        </script>
+    </head>
+    <body onload="loaded()">
+        <div id='wrapper'>
+            <div id='scroller'>
+                <div id='head'>
+                    <h2>问：退票手续费不对</h2>
+                    <p>请根据您的实际情况选择您的退票原因</p>
+                </div>
+                <div id='content'>
+                    <div id='conHead'>
+                        退票原因
+                    </div> 
+                    <div id='conBody'> 
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了.我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了.我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了.我要改变行程，我不想飞了</div>
+                        </div>
+                        <div class='conList clearfix'>
+                            <div class='icon'>
+                                <input name="reason" type="radio" value="" />
+                            </div>
+                            <div class='choice'>我要改变行程，我不想飞了.我要改变行程，我不想飞了</div>
+                        </div>
+                    </div> 
+                    <div id='submit' class='passive'>
+                        <div id='sub'>提交</div>
+                        <div id='mask'></div>
+                    </div>                    
+                </div>
+            </div>
+            <div id='diaWrap'></div>
+            <div id='dialog'> 
+                <div id='diaHead'>
+                    提示
+                </div>
+                <div id='close'>
+                    <img src="images/close.png">
+                </div>
+                <div id='diaBody'>
+                    病退的退款申请审核为14天，建议您耐心等待，如果您仍有问题，请点击发送问题给客服，我们将会有客服与您联系。
+                </div>
+                <div id='diaFoot' class='clearfix'>
+                    <div id='diaService'>发送问题给客服</div>
+                    <div id='diaKnow'>知道了</div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
