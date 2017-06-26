@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>作业二特效一</title>
+        <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+            }
+            #container{
+                margin:0 auto;
+            }
+            #nav{
+                width:1267px;
+                overflow: hidden;
+            }
+            #nav img{
+                float:left;
+                margin: 0 110px 0 150px;
+            }
+            #nav ul{
+                float:left;
+            }
+            #nav ul li{
+                list-style: none;
+                float:left;
+                height:85px;
+                line-height: 85px;
+                color:#33A7DC;
+                padding:0 16px;
+            }
+            #nav ul li a{
+                text-decoration: none;
+            }
+        	#mask{
+                width:100%;
+                height:100%;
+                position:fixed;
+                top:0;
+        		background-color:#000;
+        		opacity:0.5; 
+        		-moz-opacity:0.5; 
+        		filter:alpha(opacity=50);
+        		z-index: 1000;
+        	}
+        	#pic{
+        		position:fixed;
+				top:0;
+				left:0;
+				right:0;
+				bottom:0;
+				margin:auto;
+				width:800px;
+				height:545px;
+				z-index:1001;
+        	}
+
+            #close{
+                display:inline-block;
+                width:28px;
+                height:28px;
+                background:url(images/close.png) 0 0 no-repeat;
+                position:absolute;
+                left:786px;
+                top:-14px;
+            }
+            #close:hover{
+                background:url(images/close.png) -32px 0 no-repeat;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='container'>
+            <img src="images/head.png">
+            <div id='nav'>
+                <img src="images/flag.png">
+                <ul>
+                    <li id="btn"><a href="#">Android</a></li>
+                    <li><a href="#">iPhone</a></li>
+                    <li><a href="#">iPad</a></li>
+                    <li><a href="#">AndroidPad</a></li>
+                    <li><a href="#">WinPhone</a></li>
+                    <li><a href="#">软件市场</a></li>
+                </ul>
+            </div>
+            <img src="images/m_taobao.png">
+        </div>
+    </body>
+    <script type="text/javascript">
+    	//封装的弹出层 	
+    	function pop(){
+    		//获取页面的高度和宽度
+    	    var sWidth=document.body.scrollWidth || document.documentElement.scrollWidth;
+    	    var sHeight=document.body.scrollHeight || document.documentElement.scrollHeight;
+    		//获取页面的可视区域高度和宽度
+    		var wWidth=document.documentElement.clientWidth || document.body.clientWidth;
+    	    var wHeight=document.documentElement.clientHeight || document.body.clientHeight;
+    	    //创建遮罩层
+    	    var mask=document.createElement("div");
+    	    mask.id = 'mask';
+    	    document.body.appendChild(mask);
+    	    //创建弹出图片
+    	    var pic=document.createElement("div");
+    	    pic.id="pic";
+    	    var image=document.createElement('img');
+    	    image.src="images/layer.png";
+            pic.appendChild(image);
+            var close = document.createElement('b');
+            close.id = 'close';
+    	    pic.appendChild(close);
+    	   	document.body.appendChild(pic);  
+            //关闭功能的实现
+            close.addEventListener('click',function(){
+                pic.style.display = 'none';
+                mask.style.display = 'none';
+            },false)  
+    	}	                    
+    	window.onload=function(){
+    	    var oBtn=document.getElementById("btn");
+    	    oBtn.onclick=function(){
+    	        pop();
+    	    }
+    	              
+    	}
+    </script>
+</html>

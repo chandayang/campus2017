@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>作业二特效二</title>
+        <style type="text/css">
+        body{
+        	margin:0;
+        	border:0;
+        }
+        #wrap{
+        	height:477px;
+        	overflow:hidden;
+        }
+        #wrap li{
+        	float:left;
+        	overflow:hidden;
+        	display: block;
+        }
+        </style>
+    </head>
+    <body>
+    	<ul id='wrap'>	
+			<li class='doors'><img  src="images/door1.png"/></li>
+			<li class='doors'><img  src="images/door2.png"/></li>
+			<li class='doors'><img  src="images/door3.png"/></li>
+			<li class='doors'><img  src="images/door4.png"/></li>
+    	</ul>
+    	<script type="text/javascript">
+    	window.onload = function(){
+    		var wrap = document.getElementById('wrap');
+    		var doors = document.getElementsByClassName('doors');
+    		var imgs = document.getElementsByTagName('img');
+    		var imgWidth = imgs[0].offsetWidth;
+    		var coverWidth = 215;
+    		//设置包裹层的宽度
+    		var wrapWidth = imgWidth*4 - coverWidth*3;
+    		wrap.style.width = wrapWidth +'px';
+    		//通过设置li元素的宽度实现滑动
+    	
+    		//设置初始化状态
+    		for(var i=1;i<doors.length;i++){
+    			doors[i].style.width = (imgWidth - coverWidth) + 'px';
+    		}
+    		//设置鼠标滑动状态元素宽度变化
+    		for(var i=0;i<doors.length;i++){
+    			doors[i].onmouseover = function(){
+    				for(var j=0;j<doors.length;j++){
+    					doors[j].style.width = (imgWidth - coverWidth) + 'px';
+    				}
+    				this.style.width = imgWidth + 'px';
+
+    			}
+    		}
+    	}
+    			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    		// window.onload = function() {
+    		//     //容器对象
+    		//     var box = document.getElementById('container');
+
+    		//     //获得图片NodeList对象集合
+    		//     var imgs = box.getElementsByTagName('img');
+
+    		//     //单张图片的宽度
+    		//     var imgWidth = imgs[0].offsetWidth;
+
+    		//     //设置掩藏门体露出的宽度
+    		//     var exposeWidth = 300;
+
+    		//     //设置容器总宽度
+    		//     var boxWidth = imgWidth + (imgs.length - 1) * exposeWidth;
+    		//     box.style.width = boxWidth + 'px';
+
+    		//     //设置每道门的初始位置
+    		//     function setImgsPos() {
+    		//         for (var i = 1, len = imgs.length; i < len; i++) {
+    		//             imgs[i].style.left = imgWidth + exposeWidth * (i - 1) + 'px';
+    		//         }
+    		//     }
+    		//     setImgsPos();
+
+    		//     //计算每道门打开时应移动的距离
+    		//     var translate = imgWidth - exposeWidth;
+
+    		//     //为每道门绑定事件
+    		//     for (var i = 0, len = imgs.length; i < len; i++) {
+    		//         //使用立即调用的函数表答式，为了获得不同的i值
+    		//         (function(i) {
+    		//             imgs[i].onmouseover = function() {
+    		//                 //先将每道门复位
+    		//                 setImgsPos();
+    		//                 //打开门
+
+    		//                 for (var j = 1; j <= i; j++) {
+    		//                 //计算剩余图片移动的位置
+    		//                     imgs[j].style.left = parseInt(imgs[j].style.left, 10) - translate*0.1 + 'px';
+
+    		//                 }
+    		//             };
+    		//         })(i);
+    		//     }
+    		// };
+    	</script>
+    </body>
+</html>
