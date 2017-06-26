@@ -1,0 +1,293 @@
+/*
+* @Author: Administrator
+* @Date:   2017-04-25 09:25:54
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-05-11 11:26:56
+*/
+$baseFontSize: 64;
+@function pxTorem($px){
+  @return $px / $baseFontSize * 1rem; 
+}
+@mixin heightEline($height:58,$line-height: 58){
+  height:pxTorem(42);
+  line-height: pxTorem(42);
+}
+@mixin border-radius($radius){  
+  -webkit-border-radius: pxTorem($radius);  
+  border-radius: pxTorem($radius);
+}
+$fontWhite:#ffffff;
+$fontBlue:#25A4BB;
+$fontOrange:#FF9036;
+$fontGray:#979797;
+$bgWhite:#ffffff;
+$bgGray:#F0F0F0;
+$bgOrange:#FF9036;
+$bgBlue:#25A4BB;
+$bgRed:#FF0000;
+#head{
+  height:pxTorem(87);
+  line-height: pxTorem(87);
+  font-size: pxTorem(36);
+  background-color: $bgBlue;
+  position: relative;
+  color:$fontWhite;
+  text-align: center;
+}
+.clearfix:after{
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+#head_left{
+  float:left;
+  margin-left:pxTorem(34);
+}
+#logo{
+  float: right;
+  margin-right: pxTorem(7);
+}
+#hotel{
+  position: relative;
+}
+#hotel img{
+  width:100%;
+  display: block;
+}
+#mask{
+  position: absolute;
+  bottom:0;
+  right:0;
+  width:pxTorem(82);
+  height:pxTorem(40);
+  line-height: pxTorem(40);
+  background-color:#000000;
+  background:rgba(0,0,0,0.6);
+  color:$fontWhite;
+  text-align: center;
+  font-size: pxTorem(26);
+}
+#info{
+  border-bottom: 1px solid #979797;
+}
+.H_wrap{
+  border-bottom: 1px solid #979797;
+  padding:pxTorem(12) pxTorem(22);
+  display: flex;
+  align-items: center;
+}      
+.interval{
+  height:pxTorem(22);
+}
+#evaluate,#stay{
+  height:pxTorem(82);
+  line-height:pxTorem(82);
+}
+#stay img{
+  width:pxTorem(40);
+  height:pxTorem(40);
+}
+#evaluate{
+  border-bottom: none;
+}
+#map,#facilities{
+  height:pxTorem(118);
+  line-height: pxTorem(118);
+}
+#address{
+  padding:0 pxTorem(22);;
+  margin:0 auto;
+  border-top: 1px dashed #979797;
+  border-bottom: 1px dashed #979797;
+}
+#address .left{
+  margin-left: 0;
+}
+#address .right{
+  margin-right: 0;
+}
+
+.left{
+  float:left;
+  font-size: pxTorem(28);
+  em{
+    color:$fontBlue;
+    font-style: normal;
+  }
+  img{
+    vertical-align: middle;
+  }
+  p{
+    @include heightEline(42,42);
+  }
+}
+ .kong{
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#area_info,#area_near,#phone,#icon{
+  height:pxTorem(58);
+  line-height:pxTorem(58);
+}
+#icon img{
+  width:pxTorem(160);
+  height:pxTorem(36);
+}
+#area_near{
+  font-size: pxTorem(24);
+  color:$fontGray;
+}
+#facili{
+  border-bottom: none;
+}
+.right{
+  float:right;
+  height:100%;
+  text-align: right;
+  font-size: pxTorem(28);
+  color:$fontBlue;
+  margin-left:auto;
+  span{
+    color:$fontGray;
+  }
+  p{
+    font-size: pxTorem(24);
+    @include heightEline(42,42);
+  }
+}
+
+ #hotel_type{
+  border-top: 1px solid #979797;
+ }   
+ .left{
+    .descrip{
+      font-size: pxTorem(24);
+      color:$fontGray;
+      height:pxTorem(58);
+      line-height:pxTorem(58);
+    }
+    .mode{
+      background-color: $bgBlue;
+      color:$fontWhite;
+      display: inline-block;
+      margin-right: pxTorem(24);
+    }
+    .repay{
+      background-color: #FF0000;
+      color: $fontWhite;
+      margin-right: pxTorem(24);
+    }
+ }
+  .right .price{
+    font-size: pxTorem(32);
+    color:$fontOrange;
+    font-weight: bold;
+    em{
+      font-style: normal;
+      color:$fontGray;
+      font-size:pxTorem(24);
+    }
+    .little{
+      font-style: normal;
+      font-size: pxTorem(24);
+    }
+  }
+  .right .compare{
+    display: inline;
+    width:pxTorem(98);
+    height:pxTorem(40);
+    border-radius: pxTorem(12);
+    background-color: #1BA9BA;
+    color:$fontWhite;
+  }
+  #pay_style{
+    width:pxTorem(82);
+    height:pxTorem(85);
+    border:1px solid #FF9036;
+    @include border-radius(10);
+    text-align: center;
+    margin-left:pxTorem(12);
+    float:right;
+  }
+  .payment{
+    float:right;
+  }
+  #reserve{
+    font-size: pxTorem(32);
+    color:$fontWhite;
+    background-color: $bgOrange;
+  }
+  #shop_pay{
+    font-size: pxTorem(24);
+    color: $fontOrange;
+    background-color: $bgWhite;
+  }
+  .grey{
+    color:#979797;
+  }
+  .bg_gray{
+    background-color: #F0F0F0;
+  }
+  .bg_orange{
+    background-color: #FF6600;
+    color:white;
+  }
+  .twoLH{
+    height:pxTorem(115);
+    line-height: pxTorem(115);
+  }
+  .orange{
+    float:left;
+    margin-right: pxTorem(22);
+    border:1px solid #FF9036;
+    background-color: $bgWhite;
+    color:$fontOrange; 
+  }
+  .orange .emphsis{
+    background-color: $bgOrange;
+    color: $fontWhite;
+  }
+  #more{
+    height:pxTorem(115);
+    line-height:pxTorem(115);
+    text-align: center;
+    a{
+      text-decoration:none;
+      color:$fontBlue;
+      font-size: pxTorem(28);
+    }
+  }
+  .blue{
+    color:#25A4BB;
+  }
+  #foot{
+    font-size:pxTorem(24);
+    text-align: center;
+    color:$fontGray;
+  }
+  #note{
+    padding: pxTorem(22) pxTorem(22);
+    line-height: pxTorem(42);
+    text-align: left;
+  }
+  #footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: none;
+    padding-bottom: pxTorem(60);
+    img{
+      vertical-align:middle;
+      width:pxTorem(40);
+      height:pxTorem(40);
+    }
+  }
+  #footer a{
+    text-decoration: none;
+    color:$fontGray;
+  }
