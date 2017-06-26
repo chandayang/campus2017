@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/paging.css">
+        <script type="text/javascript" src='javascripts/script.js'></script>
+        <script type="text/javascript" src="javascripts/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="javascripts/paging.js"></script>
+    </head>
+    <body>
+    	<div id='container'>
+    		<div id='nav'>
+    			<ul>
+    				<li class='tab'>E币兑换</li>
+    				<li class='tab'>E币明细</li>
+    				<li class='tab record'>交易记录</li>
+    			</ul>
+    		</div>
+        	<div id='head'>
+        		<ul id="state_btn">
+        			<li  class='active' id='all'>全部</li>
+        			<li  id='success'>成功</li>
+        			<li  id='fail'>失败</li>
+        		</ul>
+        		<div id="display">	
+					选择日期：<input type="date" id='date_start' name="start">
+        			至<input type="date" id='date_end' name="end">
+        			<input class='btn' id='search' type="button" value="搜索">
+        			<input class='btn' id='reset' type="button" value="重置">
+        		</div>
+        	</div>
+        	<div id='content'>
+        		<ul id='con_head'>
+        			<li class="time">时间</li>
+        			<li class="name">商品名称</li>
+        			<li class='number'>数量</li>
+        			<li class='E_card'>E币</li>
+        			<li class='state'>状态</li>
+        			<li class='info'>信息</li>
+        			<li class='ex_info'>兑换信息</li>
+        			<li class='confirm'>确认</li>
+        		</ul>
+        		<ul id='con_body'>
+        			<li>
+        				<span class="time"></span>
+        				<span class="name"></span>
+        				<span class='number'></span>
+        				<span class='E_card'></span>
+        				<span class='state'></span>
+        				<span class='info'></span>
+        				<span class='ex_info'></span>
+        				<span class='confirm'></span>
+        			</li>
+        		</ul>			
+        		<div id="pageTool"></div>
+        	</div>
+    	</div>
+    </body>
+</html>

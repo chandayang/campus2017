@@ -1,0 +1,166 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-size: 12px;
+}
+#container{
+	width:1050px;
+	margin:0 auto;
+}
+#nav{
+	overflow: hidden;
+	width:1000px;
+	margin:0 auto;
+	background-color: #FBFCFD;
+	margin-top: 10px;
+	border-bottom: 1px solid #dadada;
+}
+#nav ul{
+	float:right;
+
+}
+#nav ul li{
+	list-style: none;
+	float:left;
+	width:90px;
+	height:30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #F1F1F1;
+	margin-right: 7px;
+	border:1px solid #dadada;
+	border-bottom: 1px solid #dadada;
+	border-radius: 2px;
+	cursor: pointer;
+	margin-bottom: -1px;
+}
+
+#head{
+	width:960px;
+	height:60px;
+	line-height: 60px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+#head ul{
+	display: inline-block;
+	overflow: hidden;
+	position: absolute;
+	top:15px;
+}
+#head ul li{
+	list-style: none;
+	float:left;
+	margin-right: 10px;
+	cursor: pointer;
+
+}
+#display{
+	display: inline-block;
+	float:right;
+	margin-right: 40px;
+}
+#display input{
+	border:none;
+}
+#state_btn li{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	background-color: #ffffff;
+	border-radius:4px;
+	text-align: center;
+	color:#3775C0;
+	font-size:12px;
+}
+.btn{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	background-color: #3775C0;
+	border-radius:4px;
+	text-align: center;
+	color:#ffffff;
+	font-size:12px;
+}
+#state_btn li.active{
+	background-color: #3775C0;
+	color:#ffffff;
+}
+#reset{
+	background-color: red;
+}
+#content{
+	width:960px;
+	border:1px solid #dadada;
+	margin:0 auto;
+	font-size: 12px;
+}
+#con_head{
+	width:100%;
+	background-color: #F8F8F8;
+	font:normal 12px/24px Microsoft yahei ;
+	list-style: none;
+	overflow: hidden;
+}
+#con_head li{
+	float:left;
+}
+#con_body li{
+	font-size: 0;   /* span转换成块状元素后元素之间会产生间距，此时设置父元素字号为0*/
+	height:70px;
+	line-height: 70px;
+	border-bottom: 2px solid #F8F8F8;
+	display: flex;
+	align-items: center;
+
+}
+.time{
+	width:90px;
+	margin-left: 20px;
+}
+.name{
+	width:120px;
+}
+.number{
+	width:90px;
+}
+.E_card{
+	width:90px;
+}
+.state{
+	width:90px;
+}
+.info{
+
+	width:260px;
+}
+.ex_info{
+	width:90px;
+
+
+}
+#exInfo{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	background-color: #3775C0;
+	color:#FFFFFF;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.confirm{
+	width:90px;
+}
+#con_body{
+	list-style: none;
+} 
+#con_body li span{
+	display: inline-block;
+	word-wrap: break-word;
+	font:normal 12px/24px Microsoft yahei ;
+}
